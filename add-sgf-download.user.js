@@ -14,11 +14,11 @@ function addSgfLink(element, sgf){
 // eidogo
 $(".eidogo-player-auto").each(function(){
 	var sgf = $(this).text();
-        addSgfLink($(this), sgf);
+	if(sgf !== undefined) addSgfLink($(this), sgf);
 });
 
 // 石葉
 $("applet").each(function(){
 	var sgf = $("param[name='moves']", $(this)).attr('value');
-        addSgfLink($(this), sgf);
+	if(sgf !== undefined) addSgfLink($(this), sgf);
 });
